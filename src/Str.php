@@ -6,7 +6,8 @@ class Str
 {
     public static function after($subject, $after){
         $position=strpos($subject,$after);
-        if(!$position){
+        echo "position is ".$position."<br>";
+        if($position===false){
             return $subject;
         }
         $str_lend = mb_strlen($after);
@@ -16,7 +17,7 @@ class Str
     }
     public static function afterLast($subject, $after){
         $position=strrpos($subject,$after);
-        if(!$position){
+        if($position===false){
             return $subject;
         }
         $str_lend = mb_strlen($after);
